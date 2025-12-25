@@ -1,0 +1,82 @@
+body{
+    background-color: rgb(62, 62, 62);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    flex-basis: 33%;
+    background-color: rgb(47, 29, 29);
+}
+.leftside{
+    flex-basis: 50%;
+    height: 100%;
+    background-color: rgba(59, 41, 41, 0.701);
+    display: flex;
+    flex-direction: column;
+
+}
+.rightside{
+    flex-basis: 50%;
+    height: 100%;
+    background-color: rgba(137, 110, 110, 0.875);
+ 
+}
+
+.leftside .content textarea{
+    width : calc(100% - 20px);
+    height: calc(90% - 20px);
+    padding: 10px;
+    border: 1px solid rgb(59, 30, 30);
+    background-color: rgba(137, 110, 110, 0.875);
+    color: wheat;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+
+
+}
+.leftside .content label{
+    background-color: rgb(59, 30, 30);
+    display: flex;
+    color: wheat;
+    padding: 8px 0;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rightside iframe{
+       display: blockk;
+       height: 93%;
+       width: 100%;
+       border: 1px solid rgb(59, 30, 30);
+       box-sizing: border-box;
+}
+.rightside label{
+    background-color: rgb(59, 30, 30);
+    display: flex;
+    color: wheat;
+    padding: 10px 0;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.leftside .content button{
+    background-color:wheat;
+    color: rgb(78, 44, 44);
+    border-radius: 10px;
+    height: 31px;
+    width: 100px;
+    border: 1px solid rgb(42, 29, 29);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.f{
+    gap: 600px;
+}

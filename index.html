@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compiler</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="leftside">
+        <div class="content">
+            <label class="f" >HTML<button id="rbtn">Run ></button></label>
+            <textarea ></textarea>
+        </div>
+        <div class="content">
+            <label for="">CSS</label>
+            <textarea ></textarea>
+        </div>
+        <div class="content">
+            <label for="">JAVASCRIPT</label>
+            <textarea ></textarea>
+        </div>
+    </div>
+    <div class="rightside">
+        <label  >OUTPUT</label>
+        <iframe id="output"></iframe>
+    </div>
+    <script>
+        let output=document.querySelector("#output");
+        let allinput=document.querySelectorAll(".leftside textarea");
+        let rbtn=document.getElementById("rbtn");
+        let html,css,js=""; 
+
+        button= addEventListener("click", function() {
+            
+        if(rbtn=true){
+        allinput.forEach((el,index)=>{
+        if(index==0){
+            html=el.value;
+        }
+        if(index==1){
+            css=el.value;
+        }
+        if(index==2){
+            js=el.value;
+        }
+        output.contentDocument.body.innerHTML=html;
+        output.contentDocument.head.innerHTML=`<style>${css}</style>`;
+        output.contentWindow.eval(js)  
+    })
+}
+
+});
+
+
+
+    </script>
+
+</body>
+</html>
